@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, Button, Alert } from 'react-native';
 
-export const Input = () => {
+export const Factorial = () => {
     const [value, setValue] = useState("");
 
     const pressHandler = () => {
@@ -14,6 +14,10 @@ export const Input = () => {
                     result = result * i;
                 }
                 Alert.alert(`Факториал числа ${value} равен ${result}`);
+            }
+            else if (value == 0)
+            {
+                Alert.alert("Факториал числа 0 равен 1");
             }
 
             else {
@@ -33,7 +37,7 @@ export const Input = () => {
                 placeholder="Введите число" />
 
             <Button
-                title="Расчитать"
+                title="Рассчитать"
                 onPress={pressHandler} />
         </View>
     );

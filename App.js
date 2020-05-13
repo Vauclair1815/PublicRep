@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Header } from './src/components/Header';
-import { Input } from './src/components/Input';
+import { Factorial } from './src/components/Factorial';
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <View style={styles.global}>
         <Header title="Калькулятор факториалов" />
         <View style={styles.container}>
-          <Input />
+          <Factorial />
         </View>
       </View>
     </View>
