@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Header } from './src/components/Header';
 import { Factorial } from './src/components/Factorial';
 
-export default function App() {
-  return (
-    <View>
-      <View style={styles.global}>
-        <Header title="Калькулятор факториалов" />
-        <View style={styles.container}>
-          <Factorial />
+export default class App extends React.Component {
+  state = {
+    loading: true,
+    number: {},
+  };
+
+  async componentDidMount() {
+    const url = "https://www.random.org/integers/?num=1&min=1&max=2&col=1&base=10&format=plain&rnd=new";
+    const response = await fetch(url);
+    const Data = await response.json();
+    this.setState({ number: Data, loading: false })
+  }
+
+  render() {
+
+    return (
+      <View>
+        <View style={styles.global}>
+          <Header title="Орёл и решка" />
+          <View style={styles.container}>
+            <Factorial />
+          </View>
         </View>
       </View>
-    </View>
-  );
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -24,6 +39,6 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingHorizontal: 30,
-    paddingVertical: 20
+    paddingVertical: 60
   }
 });
