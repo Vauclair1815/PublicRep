@@ -4,7 +4,7 @@ import { View, StyleSheet, Button, Alert } from 'react-native';
 export const Factorial = () => {
 
     const pressHandler = () => {
-        
+
     };
 
     return (

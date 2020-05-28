@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Орёл и решка",
+    "name": "Список фильмов",
     "slug": "mobile_final_app",
     "platforms": [
       "ios",
