@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, ActivityIndicator } from 'react-native';
 import { Header } from './src/components/Header';
-import { Factorial } from './src/components/Factorial';
 
 export default class App extends Component {
 
