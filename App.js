@@ -63,8 +63,13 @@ const styles = StyleSheet.create({
     fontSize: 30
   },
   container: {
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#e8aa0e",
+    color: "white",
     position: "relative",
     textAlign: "center",
-    padding: 20
+    paddingTop: "5%",
+    paddingLeft: "33%"
   }
 });
